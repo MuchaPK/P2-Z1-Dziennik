@@ -1,0 +1,2 @@
+Matematyka;5+;Za sprawdzian;12.12.2025;3;
+WF;6;Beep-test;03.12.2025;1;
