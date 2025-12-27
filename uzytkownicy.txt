@@ -1,2 +1,3 @@
 U;login;haslo;imie;nazwisko
 N;login1;haslo1;nauczyciel;nauczycielksi
+U;uczen;uczen;Eliot;Alderson

@@ -14,16 +14,23 @@ public:
     void pokazMenu(vector<Uzytkownik*>& baza) override {
         int wybor = 0;
         while (wybor != 3) {
-            cout << "\n--- NAUCZYCIEL: " << imie << " " << nazwisko << " ---\n";
+            Sys::wyczysc();
+            cout << "\n========================================\n";
+            cout << "   PANEL NAUCZYCIELA: " << imie << " " << nazwisko << "\n";
+            cout << "========================================\n";
             cout << "1. Wystaw ocene\n";
             cout << "2. Lista uczniow\n";
             cout << "3. Wyloguj\n";
             cout << "wybor > ";
-            cin >> wybor;
+            wybor = Sys::pobierzInt();
 
             if (wybor == 1) wystawOcene(baza);
             else if (wybor == 2) wypiszUczniow(baza);
             else if (wybor == 3) break;
+            else {
+                cout << "Nie ma takiej opcji!\n";
+                Sys::pauza();
+            }
         }
     }
 
@@ -32,9 +39,10 @@ public:
         for (Uzytkownik* u : baza) {
             if (dynamic_cast<Uczen*>(u)) {
                 cout << "- " << u->getImie() << " " << u->getNazwisko() 
-                     << " (Login: " << u->getLogin() << ")\n";
+                     << " (Login: " << u->getLogin() << ") \n";
             }
         }
+        Sys::pauza();
     }
 
     void wystawOcene(vector<Uzytkownik*>& baza) {
@@ -53,6 +61,7 @@ public:
 
         if (wybranyUczen == nullptr) {
             cout << "Nie znaleziono takiego ucznia!\n";
+            Sys::pauza();
             return;
         }
 
@@ -70,6 +79,7 @@ public:
         ofstream ocenki("oceny.txt", std::ios_base::app | std::ios_base::out);
         ocenki << "\n" << loginUcznia << ";" << przedmiot << ";" << symbol << ";" <<  opis << ";" << data << ";" << waga << ";";
         cout << "Dodano ocene!\n";
+        Sys::pauza();
     }
 };
 #endif
