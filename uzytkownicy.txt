@@ -1,3 +1,5 @@
 U;login;haslo;imie;nazwisko
 N;login1;haslo1;nauczyciel;nauczycielksi
 U;uczen;uczen;Eliot;Alderson
+A;admin;admin;admin;admin
+N;nauczyciel;nauczyciel;Adam;Kowalski

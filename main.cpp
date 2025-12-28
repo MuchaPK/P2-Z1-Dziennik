@@ -7,6 +7,7 @@
 #include "uzytkownik.h" 
 #include "nauczyciel.h"
 #include "uczen.h"
+#include "admin.h"
 
 using namespace std;
 
@@ -27,6 +28,7 @@ int main() {
             if(d.size() >= 5) {
                 if (d[0] == "U") baza.push_back(new Uczen(d[1], d[2], d[3], d[4]));
                 else if (d[0] == "N") baza.push_back(new Nauczyciel(d[1], d[2], d[3], d[4]));
+                else if (d[0] == "A") baza.push_back(new Admin(d[1], d[2], d[3], d[4]));
             }
         }
         plik_users.close();

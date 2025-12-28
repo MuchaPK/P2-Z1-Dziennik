@@ -76,7 +76,7 @@ public:
 
         
         wybranyUczen->dodajOcene(przedmiot, symbol, opis, waga, data);
-        ofstream ocenki("oceny.txt", std::ios_base::app | std::ios_base::out);
+        ofstream ocenki("../oceny.txt", std::ios_base::app | std::ios_base::out);
         ocenki << "\n" << loginUcznia << ";" << przedmiot << ";" << symbol << ";" <<  opis << ";" << data << ";" << waga << ";";
         cout << "Dodano ocene!\n";
         Sys::pauza();

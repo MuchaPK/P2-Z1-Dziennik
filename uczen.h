@@ -57,8 +57,6 @@ class Uczen: public Uzytkownik{
         void dodajOcene(string przedmiot, string symbol, string opis, int waga, string data) {
             Ocena nowaOcena(przedmiot, symbol, opis, waga, data);
             dzienniczek.push_back(nowaOcena);
-
-            //Dopisać zapisywanie do pliku
     }
     float obliczSrednia() {
         if (dzienniczek.empty()) return 0.0;

@@ -52,8 +52,8 @@ namespace Sys {
         return n;
     }
 
-
-
+    //Walidacja podawanych zmiennych jako oceny: nazwy ucznia, nazwy przedmiotu, wartości oceny, opisu, daty, wagi
+    //Walidacja dodawanych użytkowników przez Administratora
 }
 
 #endif
