@@ -39,6 +39,16 @@
 
 [] Szyfrowanie i odszyfrowywanie haseł z pliku
 
+[] Walidacja podawanych zmiennych jako oceny: nazwy ucznia, nazwy przedmiotu, wartości oceny, opisu, daty, wagi
+    
+[] Walidacja dodawanych użytkowników przez Administratora
+
+[] Edycja ocen uczniów
+
+[] Usuwanie ocen uczniów
+
+[] Opcja administratora do usuwania użytkoników z walidacją żeby zalogowany użytkownik nie mógł się skasować
+
 ...
 
 ---
@@ -60,6 +70,9 @@
 
 [x] Zapis ocen do plików
 
+[x] Konto administratora z możliwością dodawania użytkowników
+
+[x] 
 ---
 <a name="znane-bledy" id="znane-bledy"></a>
 ## Znane błędy
