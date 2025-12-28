@@ -2,18 +2,18 @@
 
 ---
 
-[Wymagania](#-wymagania)
+[Wymagania](#wymagania)
 
-[Do zrobienia](#-do-zrobienia)
+[Do zrobienia](#do-zrobienia)
 
-[Wykonane](#-wykonane)
+[Wykonane](#wykonane)
 
-[Znane błędy](#-znane-błędy)
+[Znane błędy](#znane-bledy)
 
-[Pliki](#-pliki)
+[Pliki](#pliki)
 
 ---
-
+<a name="wymagania" id="wymagania"></a>
 ## Wymagania
 [] Dziedziczenie
 
@@ -32,7 +32,7 @@
 [] Sprawozdanie
 
 ---
-
+<a name="do-zrobienia" id="do-zrobienia"></a>
 ## Do zrobienia
 [] Zapis ocen do plików
 
@@ -43,7 +43,7 @@
 ...
 
 ---
-
+<a name="wykonane" id="wykonane"></a>
 ## Wykonane
 [x] Podstawowa kontrola aplikacji (menu nauczyciela i ucznia)
 
@@ -60,13 +60,14 @@
 [x] Wystawianie ocen (Dodaje do wektora)
 
 ---
-
+<a name="znane-bledy" id="znane-bledy"></a>
 ## Znane błędy
 
 - Należy przetestować komunikaty systemowe w Windowsie
 
 ---
 
+<a name="pliki" id="pliki"></a>
 ## Pliki
 - main.cpp - Zawiera główne menu logowania, odczyt z plików
   
