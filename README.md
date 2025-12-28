@@ -34,7 +34,6 @@
 ---
 <a name="do-zrobienia" id="do-zrobienia"></a>
 ## Do zrobienia
-[] Zapis ocen do plików
 
 [] Podział tak aby uczeń widział oceny ze względu na przedmioty
 
@@ -59,11 +58,13 @@
 
 [x] Wystawianie ocen (Dodaje do wektora)
 
+[x] Zapis ocen do plików
+
 ---
 <a name="znane-bledy" id="znane-bledy"></a>
 ## Znane błędy
 
-- Należy przetestować komunikaty systemowe w Windowsie
+- Należy przetestować komunikaty systemowe w Windowsie (Możliwe że w linuxie ścieżkę względną trzeba podawać jako ../path.xyz, a w Windowsie path.xyz)
 
 ---
 
