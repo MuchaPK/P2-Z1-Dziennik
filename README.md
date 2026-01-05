@@ -43,9 +43,9 @@
     
 [] Walidacja dodawanych użytkowników przez Administratora
 
-[] Edycja ocen uczniów
+[x] Edycja ocen uczniów
 
-[] Usuwanie ocen uczniów
+[x] Usuwanie ocen uczniów
 
 [] Opcja administratora do usuwania użytkoników z walidacją żeby zalogowany użytkownik nie mógł się skasować
 
