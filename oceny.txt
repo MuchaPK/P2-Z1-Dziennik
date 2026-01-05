@@ -1,5 +1,4 @@
-login;Matematyka;5+;Za sprawdzian;12.12.2025;3;
-login;WF;6;Beep-test;03.12.2025;1;
-login;przedmiot;6;slowo;16.12.2025;2;
-login;przedmiot;4;opiscostamcostam;16.12.2025;1;
-uczen;Rust;5-;test;28.12.2025;42;
+login;Matematyka;5+;Za sprawdzian;12.12.2025;3
+login;WF;6;Beep-test;03.12.2025;1
+login;przedmiot;4;opiscostamcostam;16.12.2025;1
+uczen;Rust;5-;test;28.12.2025;42
