@@ -1,3 +1,4 @@
+//Trzeba dodać dopisywanie ocen do pliku, inaczej nie dodaje ocen
 #include <iostream>
 #include <fstream>
 #include <vector>
@@ -6,13 +7,15 @@
 #include "uzytkownik.h" 
 #include "nauczyciel.h"
 #include "uczen.h"
+#include "admin.h"
 
 using namespace std;
 
 int main() {
+    cout<<"Loginy: Uczen - login haslo; Nauczyciel - login1 haslo1 (plik main.cpp linia 13 - do usunięcia po zakończeniu)"<<endl;
     vector<Uzytkownik*> baza;
 
-    ifstream plik_users("uzytkownicy.txt"); 
+    ifstream plik_users("../uzytkownicy.txt");
     if (plik_users.is_open()) {
         string linia, segment;
         while (getline(plik_users, linia)) {
@@ -25,6 +28,7 @@ int main() {
             if(d.size() >= 5) {
                 if (d[0] == "U") baza.push_back(new Uczen(d[1], d[2], d[3], d[4]));
                 else if (d[0] == "N") baza.push_back(new Nauczyciel(d[1], d[2], d[3], d[4]));
+                else if (d[0] == "A") baza.push_back(new Admin(d[1], d[2], d[3], d[4]));
             }
         }
         plik_users.close();
@@ -33,7 +37,7 @@ int main() {
         return 1;
     }
 
-    ifstream oceny_plik("oceny.txt");
+    ifstream oceny_plik("../oceny.txt");
     if (oceny_plik.is_open()) {
         string linia, segment;
         while(getline(oceny_plik, linia)) {
@@ -61,7 +65,7 @@ int main() {
 
 
     while (true) {
-        system("cls");
+        Sys::wyczysc();
         cout << "========================================\n";
         cout << "          DZIENNIK ELEKTRONICZNY        \n";
         cout << "========================================\n";

@@ -5,6 +5,7 @@
 #include<fstream>
 using namespace std;
 #include "uzytkownik.h"
+#include "sys_var.h"
 
 class Uczen: public Uzytkownik{
     public:
@@ -76,16 +77,17 @@ class Uczen: public Uzytkownik{
     void pokazMenu(vector<Uzytkownik*>& baza) override {
     int wybor = 0;
 
-    while (wybor != 2) { 
-        system("cls");
-        
+    while (true) {
+        Sys::wyczysc();
+
         cout << "\n========================================\n";
         cout << "   PANEL UCZNIA: " << imie << " " << nazwisko << "\n";
         cout << "========================================\n";
         cout << "1. Zobacz moje oceny\n";
         cout << "2. Wyloguj\n";
         cout << "Wybor > ";
-        cin >> wybor;
+        wybor = Sys::pobierzInt();
+
 
         if (wybor == 1) {
             cout << "\n--- TWOJE OCENY ---\n";
@@ -100,14 +102,15 @@ class Uczen: public Uzytkownik{
             }
             
             cout << "\n";
-            system("pause"); 
+            Sys::pauza();
         }
         else if (wybor == 2) {
             cout << "Wylogowywanie...\n";
+            break;
         }
         else {
             cout << "Nie ma takiej opcji!\n";
-            system("pause"); 
+            Sys::pauza();
         }
     }
 }
