@@ -15,7 +15,7 @@ int main() {
     cout<<"Loginy: Uczen - login haslo; Nauczyciel - login1 haslo1 (plik main.cpp linia 13 - do usunięcia po zakończeniu)"<<endl;
     vector<Uzytkownik*> baza;
 
-    ifstream plik_users("../uzytkownicy.txt");
+    ifstream plik_users("uzytkownicy.txt");
     if (plik_users.is_open()) {
         string linia, segment;
         while (getline(plik_users, linia)) {
@@ -37,7 +37,7 @@ int main() {
         return 1;
     }
 
-    ifstream oceny_plik("../oceny.txt");
+    ifstream oceny_plik("oceny.txt");
     if (oceny_plik.is_open()) {
         string linia, segment;
         while(getline(oceny_plik, linia)) {
