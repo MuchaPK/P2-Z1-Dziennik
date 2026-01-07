@@ -15,15 +15,15 @@
 ---
 <a name="wymagania" id="wymagania"></a>
 ## Wymagania
-[] Dziedziczenie
+[x] Dziedziczenie
 
-[] Polimorfizm
+[x] Polimorfizm
 
 [x] Klasy abstrakcyjne
 
-[] Klasy wewnętrzne
+[x] Klasy wewnętrzne
 
-[] Odczyt i zapis do pliku/ów
+[x] Odczyt i zapis do pliku/ów
 
   - Odczyt użytkoników i ocen jest zrobiony
     
@@ -42,10 +42,6 @@
 [] Walidacja podawanych zmiennych jako oceny: nazwy ucznia, nazwy przedmiotu, wartości oceny, opisu, daty, wagi
     
 [] Walidacja dodawanych użytkowników przez Administratora
-
-[x] Edycja ocen uczniów
-
-[x] Usuwanie ocen uczniów
 
 [] Opcja administratora do usuwania użytkoników z walidacją żeby zalogowany użytkownik nie mógł się skasować
 
@@ -72,12 +68,14 @@
 
 [x] Konto administratora z możliwością dodawania użytkowników
 
-[x] 
+[x] Edycja ocen uczniów
+
+[x] Usuwanie ocen uczniów
 ---
 <a name="znane-bledy" id="znane-bledy"></a>
 ## Znane błędy
 
-- Należy przetestować komunikaty systemowe w Windowsie (Możliwe że w linuxie ścieżkę względną trzeba podawać jako ../path.xyz, a w Windowsie path.xyz)
+- Należy sprawdzić na końcu w konfiguracji programy czy na pewno ma ustawiony dobry katalog roboczy jako główny
 
 ---
 

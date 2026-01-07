@@ -59,33 +59,34 @@ public:
 
     void edytujOcene(vector<Uzytkownik*>& baza) {
         Uczen* ucz = wybierzUcznia(baza);
-        if (!ucz) return;
+        if (!ucz) { cout << "Nie ma uczniów.\n"; Sys::pauza();}
+        else if (ucz->dzienniczek.empty()) { cout << "Ten uczen nie ma ocen.\n"; Sys::pauza(); }
+        else {
+            // Wyświetlanie ocen (dostęp bezpośredni dzięki friend)
+            cout << "\nOceny ucznia " << ucz->getImie() << ":\n";
+            for (int i = 0; i < ucz->dzienniczek.size(); i++) {
+                cout << i + 1 << ". ";
+                ucz->dzienniczek[i].wypisz();
+            }
 
-        if (ucz->dzienniczek.empty()) { cout << "Ten uczen nie ma ocen.\n"; return; }
+            cout << "Wybierz numer oceny do edycji: ";
+            int nr = Sys::pobierzInt();
+            if (nr < 1 || nr > ucz->dzienniczek.size()) { cout << "Zly numer.\n"; Sys::pauza(); }
+            else {
+                // Edycja bezpośrednia na wektorze
+                auto& ocena = ucz->dzienniczek[nr - 1];
+                cout << "Edytujesz: " << ocena.przedmiot << " (" << ocena.symbol << ")\n";
 
-        // Wyświetlanie ocen (dostęp bezpośredni dzięki friend)
-        cout << "\nOceny ucznia " << ucz->getImie() << ":\n";
-        for (int i = 0; i < ucz->dzienniczek.size(); i++) {
-            cout << i + 1 << ". ";
-            ucz->dzienniczek[i].wypisz();
+                cout << "Nowa ocena (symbol, np. 4+): "; cin >> ocena.symbol;
+                cout << "Nowy opis: "; cin.ignore(); getline(cin, ocena.opis);
+                cout << "Nowa waga: "; ocena.waga = Sys::pobierzInt();
+
+                // Przeliczenie wartości liczbowej (korzystamy z metody w strukturze Ocena)
+                ocena.wartosc = ocena.przeliczNaLiczbe(ocena.symbol);
+
+                zapiszWszystkieOcenyDoPliku(baza); // Zapis do pliku
+            }
         }
-
-        cout << "Wybierz numer oceny do edycji: ";
-        int nr = Sys::pobierzInt();
-        if (nr < 1 || nr > ucz->dzienniczek.size()) { cout << "Zly numer.\n"; return; }
-
-        // Edycja bezpośrednia na wektorze
-        auto& ocena = ucz->dzienniczek[nr - 1];
-        cout << "Edytujesz: " << ocena.przedmiot << " (" << ocena.symbol << ")\n";
-
-        cout << "Nowa ocena (symbol, np. 4+): "; cin >> ocena.symbol;
-        cout << "Nowy opis: "; cin.ignore(); getline(cin, ocena.opis);
-        cout << "Nowa waga: "; ocena.waga = Sys::pobierzInt();
-
-        // Przeliczenie wartości liczbowej (korzystamy z metody w strukturze Ocena)
-        ocena.wartosc = ocena.przeliczNaLiczbe(ocena.symbol);
-
-        zapiszWszystkieOcenyDoPliku(baza); // Zapis do pliku
     }
 
     void usunOcene(vector<Uzytkownik*>& baza) {
@@ -111,7 +112,7 @@ public:
 
     void pokazMenu(vector<Uzytkownik*>& baza) override {
         int wybor = 0;
-        while (wybor != 3) {
+        while (wybor != 5) {
             Sys::wyczysc();
             cout << "\n========================================\n";
             cout << "   PANEL NAUCZYCIELA: " << imie << " " << nazwisko << "\n";

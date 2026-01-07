@@ -1,4 +1,3 @@
-//Trzeba dodać dopisywanie ocen do pliku, inaczej nie dodaje ocen
 #include <iostream>
 #include <fstream>
 #include <vector>
