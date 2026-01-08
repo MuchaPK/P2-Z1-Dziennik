@@ -1,3 +1,4 @@
+//cout<<"Loginy: Uczen - login haslo; Nauczyciel - login1 haslo1, Admin - admin admin
 #include <iostream>
 #include <fstream>
 #include <vector>
@@ -11,7 +12,7 @@
 using namespace std;
 
 int main() {
-    cout<<"Loginy: Uczen - login haslo; Nauczyciel - login1 haslo1 (plik main.cpp linia 13 - do usunięcia po zakończeniu)"<<endl;
+
     vector<Uzytkownik*> baza;
 
     ifstream plik_users("uzytkownicy.txt");
@@ -82,7 +83,7 @@ int main() {
 
         cout << "Haslo: ";
         cin >> podaneHaslo;
-
+        podaneHaslo = Sys::szyfrowanie(podaneHaslo, totalnieUkrytyKluczDostepu);
         bool zalogowano = false;
 
 

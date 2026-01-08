@@ -3,8 +3,6 @@ np. Windows - system("cls"); Linux - system("clear");
 //Uwaga: Wszystkie strumienie z przestrzeni std należy dodawać tutaj ręcznie (nie dodawałem w nagłówkach namespace std)
 
 Do prawidłowego działania na linuxie Trzeba włączyć emulację w CLionie: Run -> Edit Configurations... -> Emulate Terminal, wtedy wszystko ładnie czyści
-
-UWAGA: NALEŻY PRZETESTOWAĆ NA WINDOWSIE
 */
 #ifndef SYS_VAR_H
 #define SYS_VAR_H
@@ -51,6 +49,17 @@ namespace Sys {
         }
         return n;
     }
+
+    //Szyfrowanie XOR
+    string szyfrowanie(string tekst, string klucz) {
+        for (int i = 0; i < tekst.length(); i++) {
+            tekst[i] ^= klucz[i % klucz.length()];
+            if (tekst[i] == ';') tekst[i]='F'; //Zabezpieczenie przed rozparcelowaniem naszej CSV'ki
+        }
+        return tekst;
+    }
+
+
 
     //Walidacja podawanych zmiennych jako oceny: nazwy ucznia, nazwy przedmiotu, wartości oceny, opisu, daty, wagi
     //Walidacja dodawanych użytkowników przez Administratora

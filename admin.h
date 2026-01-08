@@ -7,7 +7,7 @@ using namespace std;
 #include "uzytkownik.h"
 #include "sys_var.h"
 
-
+string totalnieUkrytyKluczDostepu = "KOTWPRALCE";
 
 class Admin : public Uzytkownik {
 public:
@@ -38,12 +38,12 @@ public:
     }
 
     void dodajUzytkownika(vector<Uzytkownik*>& baza) {
-        ofstream uzytkownicy("../uzytkownicy.txt", ios::app | ios::out);
+        ofstream uzytkownicy("uzytkownicy.txt", ios::app | ios::out);
         string typ_uzytkownika, login, haslo, imie, nazwisko;
 
         cout << "Typ użytkownika: (U, N, A): "; cin >> typ_uzytkownika;
         cout << "Login: "; cin >> login;
-        cout << "Haslo: "; cin >> haslo;
+        cout << "Haslo: "; cin >> haslo; haslo = Sys::szyfrowanie(haslo,totalnieUkrytyKluczDostepu);
         cout << "Imie: "; cin >> imie;
         cout << "Nazwisko: "; cin >> nazwisko;
 
@@ -63,9 +63,49 @@ public:
         uzytkownicy.close();
     }
 
-    //Trzeba zrobić żeby nie mógł skasować siebie
-    //Trzeba zrobić kasowanie z pliku
-    void usunUzytkownika(vector<Uzytkownik*>& baza) {}
+    void wypiszUzytkownikow(vector<Uzytkownik*>& baza) {
+        cout << "\nLista użytkowników w systemie:\n";
+        int licznik = 1;
+        for (Uzytkownik* u : baza) {
+                cout << licznik <<"- " << u->getImie() << " " << u->getNazwisko()<< " (Login: " << u->getLogin() << ") \n";
+            licznik++;
+        }
+    }
+
+
+
+    void usunUzytkownika(vector<Uzytkownik*>& baza) {
+        wypiszUzytkownikow(baza);
+        int do_usuniecia{0};
+        do_usuniecia = Sys::pobierzInt();
+
+        if (do_usuniecia == 0) {
+            cout<<"Nikogo nie usunięto";
+            Sys::pauza();
+        }
+        else {
+            ifstream przed("uzytkownicy.txt", ios::in); //plik musiał istneć podczas uruchamiania programu dlatego już nie sprawdzam
+            ofstream po("temp_uzytkownicy.txt", ios::trunc);
+            string linia{};
+
+            int licznik{0};
+            while (getline(przed, linia)) {
+                licznik++;
+                if (licznik == do_usuniecia)
+                    continue;
+                else
+                    po << linia << endl;
+
+            }
+
+            przed.close();
+            po.close();
+            remove("uzytkownicy.txt");
+            rename("temp_uzytkownicy.txt", "uzytkownicy.txt");
+            Sys::pauza();
+        }
+    }
+
 };
 
 

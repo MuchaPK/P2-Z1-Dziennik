@@ -37,13 +37,9 @@
 
 [] Podział tak aby uczeń widział oceny ze względu na przedmioty
 
-[] Szyfrowanie i odszyfrowywanie haseł z pliku
-
 [] Walidacja podawanych zmiennych jako oceny: nazwy ucznia, nazwy przedmiotu, wartości oceny, opisu, daty, wagi
     
 [] Walidacja dodawanych użytkowników przez Administratora
-
-[] Opcja administratora do usuwania użytkoników z walidacją żeby zalogowany użytkownik nie mógł się skasować
 
 ...
 
@@ -62,7 +58,7 @@
 
 [x] Wyświetlanie listy uczniów
 
-[x] Wystawianie ocen (Dodaje do wektora)
+[x] Wystawianie ocen
 
 [x] Zapis ocen do plików
 
@@ -71,6 +67,9 @@
 [x] Edycja ocen uczniów
 
 [x] Usuwanie ocen uczniów
+
+[x] Szyfrowanie i odszyfrowywanie haseł z pliku
+
 ---
 <a name="znane-bledy" id="znane-bledy"></a>
 ## Znane błędy
