@@ -1,0 +1,8 @@
+[2026-01-12 00:06:35] Nauczyciel nauczyciel nauczycielski został poprawnie zalogowany do systemu.
+[2026-01-12 00:07:37] Dodano ocenę: costam 6 dla ucznia login
+[2026-01-12 00:07:37] Nauczyciel nauczyciel nauczycielski wystawil ocene 6 uczniowi login z przedmiotu costam.
+[2026-01-12 00:14:09] Program dziennik elektroniczny został uruchomiony.
+[2026-01-12 00:14:09] Dane zostały poprawnie wczytane!
+[2026-01-12 00:14:09] Dodano ocenę: WF 6 dla ucznia login
+[2026-01-12 00:14:09] Dodano ocenę: przedmiot 3- dla ucznia login
+[2026-01-12 00:14:09] Oceny zostały poprawnie wczytane z pliku oceny.txt.

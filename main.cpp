@@ -8,11 +8,12 @@
 #include "nauczyciel.h"
 #include "uczen.h"
 #include "admin.h"
+#include "zrobraport.h"
 
 using namespace std;
 
 int main() {
-
+    zrobRaport("Program dziennik elektroniczny został uruchomiony.");
     vector<Uzytkownik*> baza;
 
     ifstream plik_users("uzytkownicy.txt");
@@ -31,9 +32,11 @@ int main() {
                 else if (d[0] == "A") baza.push_back(new Admin(d[1], d[2], d[3], d[4]));
             }
         }
+        zrobRaport("Dane zostały poprawnie wczytane!");
         plik_users.close();
     } else {
-        cout << "BLAD: Brak pliku uzytkownicy.txt!\n";
+        zrobRaport("BŁAD: Plik uzytkownicy.txt nie został znaleziony przy starcie programu.");
+        cout << "BŁAD: Brak pliku uzytkownicy.txt!\n";
         return 1;
     }
 
@@ -60,6 +63,7 @@ int main() {
                 }
             }
         }
+        zrobRaport("Oceny zostały poprawnie wczytane z pliku oceny.txt.");
         oceny_plik.close();
     }
 
@@ -99,6 +103,7 @@ int main() {
         }
 
         if (!zalogowano) {
+            zrobRaport("Nieudana próba logowania dla loginu: " + podanyLogin);
             cout << "\nBLAD: Niepoprawny login lub haslo!\n";
             cout << "Wcisnij Enter aby sprobowac ponownie...";
             cin.ignore(); cin.get();

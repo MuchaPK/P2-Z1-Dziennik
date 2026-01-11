@@ -6,6 +6,7 @@
 #include<vector>
 #include "uzytkownik.h"
 #include "sys_var.h"
+#include "zrobraport.h"
 
 using namespace std;
 
@@ -49,6 +50,7 @@ class Uczen: public Uzytkownik{
 
             void wypisz() const { // const, bo wypisywanie nie zmienia obiektu
                 cout << przedmiot << ": " << symbol << " (Waga: " << waga << ") - " << opis << " [" << data << "]" << endl;
+                zrobRaport("Wyświetlono ocenę: " + przedmiot + " " + symbol + " dla ucznia.");
             }
         };
 
@@ -61,18 +63,21 @@ class Uczen: public Uzytkownik{
         void dodajOcene(string przedmiot, string symbol, string opis, int waga, string data) {
             Ocena nowaOcena(przedmiot, symbol, opis, waga, data);
             dzienniczek.push_back(nowaOcena);
+            zrobRaport("Dodano ocenę: " + przedmiot + " " + symbol + " dla ucznia " + getLogin());
         }
 
         // --- ZMIANA: Metody do zarządzania ocenami WEWNĄTRZ klasy Uczen ---
 
         // Zwraca oceny tylko do odczytu (const), żeby Nauczyciel mógł je wyświetlić, ale nie zmienić "ręcznie"
         const vector<Ocena>& pobierzOceny() const {
+            zrobRaport("Pobrano oceny do odczytu");
             return dzienniczek;
         }
 
         bool usunOcene(int indeks) {
             if (indeks < 0 || indeks >= dzienniczek.size()) return false;
             dzienniczek.erase(dzienniczek.begin() + indeks);
+            zrobRaport("Usunięto ocenę o indeksie " + to_string(indeks) + " dla ucznia " + getLogin());
             return true;
         }
 
@@ -84,7 +89,7 @@ class Uczen: public Uzytkownik{
             dzienniczek[indeks].wartosc = dzienniczek[indeks].przeliczNaLiczbe(nowySymbol);
             dzienniczek[indeks].opis = nowyOpis;
             dzienniczek[indeks].waga = nowaWaga;
-
+            zrobRaport("Zmodyfikowano ocenę o indeksie " + to_string(indeks) + " dla ucznia " + getLogin());
             return true;
         }
         // ------------------------------------------------------------------
@@ -106,7 +111,7 @@ class Uczen: public Uzytkownik{
 
             while (true) {
                 Sys::wyczysc();
-
+                zrobRaport("Uczen " + imie + " " + nazwisko + " został poprawnie zalogowany do systemu.");
                 cout << "\n========================================\n";
                 cout << "   PANEL UCZNIA: " << imie << " " << nazwisko << "\n";
                 cout << "========================================\n";
@@ -118,13 +123,15 @@ class Uczen: public Uzytkownik{
 
                 if (wybor == 1) {
                     cout << "\n--- TWOJE OCENY ---\n";
-
                     if (dzienniczek.empty()) {
+                        zrobRaport("Uczen " + imie + " " + nazwisko + " wyświetlił swoje oceny. (brak ocen)");
                         cout << "Brak ocen w dzienniku.\n";
                     } else {
+                        zrobRaport("Uczen " + imie + " " + nazwisko + " wyświetlił swoje oceny.");
                         for(auto& o : dzienniczek) {
                             o.wypisz();
                         }
+
                         cout << "\nSrednia wazona: " << obliczSrednia() << endl;
                     }
 
@@ -133,9 +140,11 @@ class Uczen: public Uzytkownik{
                 }
                 else if (wybor == 2) {
                     cout << "Wylogowywanie...\n";
+                    zrobRaport("Uczen " + imie + " " + nazwisko + " poprawnie wylogował się z systemu.");
                     break;
                 }
                 else {
+                    zrobRaport("Uczen " + imie + " " + nazwisko + " wybral nieprawidłową opcje w menu.");
                     cout << "Nie ma takiej opcji!\n";
                     Sys::pauza();
                 }

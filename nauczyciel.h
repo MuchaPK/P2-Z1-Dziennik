@@ -6,6 +6,7 @@
 using namespace std;
 #include "uzytkownik.h"
 #include "uczen.h"
+#include "zrobraport.h"
 
 class Nauczyciel : public Uzytkownik {
 public:
@@ -15,7 +16,6 @@ public:
     void zapiszWszystkieOcenyDoPliku(vector<Uzytkownik*>& baza) {
         ofstream plik("oceny.txt", ios::trunc); // Czyścimy plik
         if (!plik.is_open()) return;
-
         for (Uzytkownik* u : baza) {
             // Rzutujemy na Ucznia, żeby dostać się do dzienniczka
             Uczen* ucz = dynamic_cast<Uczen*>(u);
@@ -31,6 +31,7 @@ public:
                 }
             }
         }
+        zrobRaport("Zapisano wszystkie oceny do pliku oceny.txt przez nauczyciela " + imie + " " + nazwisko);
         plik.close();
         cout << " [i] Zapisano zmiany w pliku oceny.txt\n";
     }
@@ -40,6 +41,7 @@ public:
         vector<Uczen*> listaUczniow;
         int i = 1;
         cout << "\n--- LISTA UCZNIOW ---\n";
+        zrobRaport("Nauczyciel " + imie + " " + nazwisko + " wyświetlił listę uczniów.");
         for (Uzytkownik* u : baza) {
             Uczen* ucz = dynamic_cast<Uczen*>(u);
             if (ucz) {
@@ -80,10 +82,11 @@ public:
                 cout << "Nowa ocena (symbol, np. 4+): "; cin >> ocena.symbol;
                 cout << "Nowy opis: "; cin.ignore(); getline(cin, ocena.opis);
                 cout << "Nowa waga: "; ocena.waga = Sys::pobierzInt();
+                cout << "Ocena zaktualizowana.\n";
 
                 // Przeliczenie wartości liczbowej (korzystamy z metody w strukturze Ocena)
                 ocena.wartosc = ocena.przeliczNaLiczbe(ocena.symbol);
-
+                zrobRaport("Zaktualizowano ocene dla ucznia " + ucz->getLogin() + " przez nauczyciela " + imie + " " + nazwisko);
                 zapiszWszystkieOcenyDoPliku(baza); // Zapis do pliku
             }
         }
@@ -106,13 +109,14 @@ public:
         // Usuwanie z wektora
         ucz->dzienniczek.erase(ucz->dzienniczek.begin() + (nr - 1));
         cout << "Usunieto ocene.\n";
-
+        zrobRaport("Usunieto ocene dla ucznia " + ucz->getLogin() + " przez nauczyciela " + imie + " " + nazwisko);
         zapiszWszystkieOcenyDoPliku(baza); // Zapis do pliku
     }
 
     void pokazMenu(vector<Uzytkownik*>& baza) override {
         int wybor = 0;
         while (wybor != 5) {
+            zrobRaport("Nauczyciel " + imie + " " + nazwisko + " został poprawnie zalogowany do systemu.");
             Sys::wyczysc();
             cout << "\n========================================\n";
             cout << "   PANEL NAUCZYCIELA: " << imie << " " << nazwisko << "\n";
@@ -130,11 +134,13 @@ public:
                 zapiszWszystkieOcenyDoPliku(baza);
             }
             else if (wybor == 2) wypiszUczniow(baza);
+
             else if (wybor == 3) edytujOcene(baza);
             else if (wybor == 4) usunOcene(baza);
             else if (wybor == 5) break;
             else {
                 cout << "Nie ma takiej opcji!\n";
+                zrobRaport("Nauczyciel " + imie + " " + nazwisko + " wybral nieprawidlowa opcje w menu.");
                 Sys::pauza();
             }
         }
@@ -148,6 +154,7 @@ public:
                      << " (Login: " << u->getLogin() << ") \n";
             }
         }
+        zrobRaport("Nauczyciel " + imie + " " + nazwisko + " wypisal liste uczniow.");
         Sys::pauza();
     }
 
@@ -185,6 +192,7 @@ public:
         ofstream ocenki("../oceny.txt", std::ios_base::app | std::ios_base::out);
         ocenki << "\n" << loginUcznia << ";" << przedmiot << ";" << symbol << ";" <<  opis << ";" << data << ";" << waga << ";";
         cout << "Dodano ocene!\n";
+        zrobRaport("Nauczyciel " + imie + " " + nazwisko + " wystawil ocene " + symbol + " uczniowi " + loginUcznia + " z przedmiotu " + przedmiot + ".");
         Sys::pauza();
     }
 };

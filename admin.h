@@ -6,6 +6,7 @@
 using namespace std;
 #include "uzytkownik.h"
 #include "sys_var.h"
+#include "zrobraport.h"
 
 string totalnieUkrytyKluczDostepu = "KOTWPRALCE";
 
@@ -18,6 +19,7 @@ public:
 
         while (wybor != 3) {
             Sys::wyczysc();
+            zrobRaport("Administrator " + imie + " " + nazwisko + " został poprawnie zalogowany do systemu.");
             cout << "\n========================================\n";
             cout << "   PANEL ADMINISTRATORA: " << imie << " " << nazwisko << "\n";
             cout << "========================================\n";
@@ -53,10 +55,12 @@ public:
             else if (typ_uzytkownika == "N") baza.push_back(new Nauczyciel(login, haslo, imie, nazwisko));
             else if (typ_uzytkownika == "A") baza.push_back(new Admin(login, haslo, imie, nazwisko));
             cout << "Dodano użytkownika: " << imie << " " << nazwisko << "!\n";
+            zrobRaport("Użytkownik: " + imie + " " + nazwisko + " został poprawnie dodany przez administratora " + this->imie + " " + this->nazwisko + ".");
             Sys::pauza();
         }
         else {
             cout << "Nie ma takiego pliku!\n";
+            zrobRaport("Błąd: Nie udało się otworzyć pliku uzytkownicy.txt przy próbie dodania użytkownika przez administratora " + this->imie + " " + this->nazwisko + ".");
             Sys::pauza();
         }
 
@@ -64,6 +68,7 @@ public:
     }
 
     void wypiszUzytkownikow(vector<Uzytkownik*>& baza) {
+        zrobRaport("Administrator " + imie + " " + nazwisko + " wyświetlił listę użytkowników.");
         cout << "\nLista użytkowników w systemie:\n";
         int licznik = 1;
         for (Uzytkownik* u : baza) {
@@ -97,7 +102,7 @@ public:
                     po << linia << endl;
 
             }
-
+            zrobRaport("Użytkownik: " + baza[do_usuniecia - 1]->getImie() + " " + baza[do_usuniecia - 1]->getNazwisko() + " został usunięty przez administratora " + this->imie + " " + this->nazwisko + ".");
             przed.close();
             po.close();
             remove("uzytkownicy.txt");
