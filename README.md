@@ -27,7 +27,7 @@
 
   - Odczyt użytkoników i ocen jest zrobiony
     
-[] Generowanie raportu z wynikami działania programu
+[X] Generowanie raportu z wynikami działania programu
 
 [] Sprawozdanie
 

@@ -81,6 +81,7 @@ int main() {
 
 
         if (podanyLogin == "exit") {
+            zrobRaport("Program dziennik elektroniczny został zamknięty przez użytkownika.");
             cout << "Do widzenia!\n";
             break;
         }
@@ -115,6 +116,6 @@ int main() {
         delete u;
     }
     baza.clear();
-
+    zrobRaport("Program dziennik elektroniczny został poprawnie zamknięty.");
     return 0;
 }

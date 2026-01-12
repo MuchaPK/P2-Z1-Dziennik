@@ -63,7 +63,6 @@ class Uczen: public Uzytkownik{
         void dodajOcene(string przedmiot, string symbol, string opis, int waga, string data) {
             Ocena nowaOcena(przedmiot, symbol, opis, waga, data);
             dzienniczek.push_back(nowaOcena);
-            zrobRaport("Dodano ocenę: " + przedmiot + " " + symbol + " dla ucznia " + getLogin());
         }
 
         // --- ZMIANA: Metody do zarządzania ocenami WEWNĄTRZ klasy Uczen ---
