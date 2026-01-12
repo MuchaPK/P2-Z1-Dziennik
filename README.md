@@ -35,12 +35,6 @@
 <a name="do-zrobienia" id="do-zrobienia"></a>
 ## Do zrobienia
 
-[] Podział tak aby uczeń widział oceny ze względu na przedmioty
-
-[] Walidacja podawanych zmiennych jako oceny: nazwy ucznia, nazwy przedmiotu, wartości oceny, opisu, daty, wagi
-    
-[] Walidacja dodawanych użytkowników przez Administratora
-
 ...
 
 ---
@@ -83,16 +77,24 @@
 - main.cpp - Zawiera główne menu logowania, odczyt z plików
   
 - uzytkownik.h - plik nagłówkowy zawierający klasę użytkownik, która jest też klasą abstrakcyjną
+
+- admin.h - plik nagłówkowy zawierający panel administratora i metody dotyczące zarządzania użytkownikami.
   
 - nauczyciel.h - plik nagłówkowy zawierający panel nauczyciela i metody dotyczące działań nauczyciela
   
 - uczen.h - plik nagłówkowy zawierający panel ucznia i metody dotyczące działań ucznia
   
 - sys_var.h - plik nagłówkowy zawierający sprawdzanie systemu operacyjnego oraz narzędzia walidacyjne
+
+- zrobraport.h - plik nagłówkowy służący do generowania raportu/logów z działania programu
   
 - uzytkownicy.txt - plik tekstowy zawierający dane użytkowników
   
 - oceny.txt - plik tekstowy zawierający oceny uczniów
+
+- raport.txt - plik tekstowy zawierający raport z działania programu
+
+  
 
 
 
