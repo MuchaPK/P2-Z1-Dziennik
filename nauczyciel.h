@@ -14,7 +14,7 @@ public:
 
     // Funkcja zapisująca stan faktyczny (z pamięci RAM) do pliku tekstowego
     void zapiszWszystkieOcenyDoPliku(vector<Uzytkownik*>& baza) {
-        ofstream plik("oceny.txt", ios::trunc); // Czyścimy plik
+        ofstream plik("oceny.txt", ios::trunc);
         if (!plik.is_open()) return;
         for (Uzytkownik* u : baza) {
             // Rzutujemy na Ucznia, żeby dostać się do dzienniczka
@@ -189,7 +189,7 @@ public:
 
 
         wybranyUczen->dodajOcene(przedmiot, symbol, opis, waga, data);
-        ofstream ocenki("../oceny.txt", std::ios_base::app | std::ios_base::out);
+        ofstream ocenki("oceny.txt", std::ios_base::app | std::ios_base::out);
         ocenki << "\n" << loginUcznia << ";" << przedmiot << ";" << symbol << ";" <<  opis << ";" << data << ";" << waga << ";";
         cout << "Dodano ocene!\n";
         zrobRaport("Nauczyciel " + imie + " " + nazwisko + " wystawil ocene " + symbol + " uczniowi " + loginUcznia + " z przedmiotu " + przedmiot + ".");

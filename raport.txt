@@ -6,3 +6,87 @@
 [2026-01-12 00:14:09] Dodano ocenę: WF 6 dla ucznia login
 [2026-01-12 00:14:09] Dodano ocenę: przedmiot 3- dla ucznia login
 [2026-01-12 00:14:09] Oceny zostały poprawnie wczytane z pliku oceny.txt.
+[2026-01-12 16:50:31] Program dziennik elektroniczny został uruchomiony.
+[2026-01-12 16:50:31] Dane zostały poprawnie wczytane!
+[2026-01-12 16:50:31] Oceny zostały poprawnie wczytane z pliku oceny.txt.
+[2026-01-12 16:50:36] Nauczyciel nauczyciel nauczycielski został poprawnie zalogowany do systemu.
+[2026-01-12 16:51:08] Nauczyciel nauczyciel nauczycielski wystawil ocene 3- uczniowi uczen z przedmiotu Cpp.
+[2026-01-12 16:51:08] Zapisano wszystkie oceny do pliku oceny.txt przez nauczyciela nauczyciel nauczycielski
+[2026-01-12 16:51:08] Nauczyciel nauczyciel nauczycielski został poprawnie zalogowany do systemu.
+[2026-01-12 16:51:23] Program dziennik elektroniczny został zamknięty przez użytkownika.
+[2026-01-12 16:51:23] Program dziennik elektroniczny został poprawnie zamknięty.
+[2026-01-12 16:51:45] Program dziennik elektroniczny został uruchomiony.
+[2026-01-12 16:51:45] Dane zostały poprawnie wczytane!
+[2026-01-12 16:51:45] Oceny zostały poprawnie wczytane z pliku oceny.txt.
+[2026-01-12 16:51:50] Uczen Eliot Alderson został poprawnie zalogowany do systemu.
+[2026-01-12 16:52:05] Uczen Eliot Alderson wyświetlił swoje oceny.
+[2026-01-12 16:52:05] Wyświetlono ocenę: Cpp 3- dla ucznia.
+[2026-01-12 16:52:08] Uczen Eliot Alderson został poprawnie zalogowany do systemu.
+[2026-01-12 16:52:09] Uczen Eliot Alderson poprawnie wylogował się z systemu.
+[2026-01-12 16:52:11] Program dziennik elektroniczny został zamknięty przez użytkownika.
+[2026-01-12 16:52:11] Program dziennik elektroniczny został poprawnie zamknięty.
+[2026-01-12 17:13:09] Program dziennik elektroniczny został uruchomiony.
+[2026-01-12 17:13:09] Dane zostały poprawnie wczytane!
+[2026-01-12 17:13:09] Oceny zostały poprawnie wczytane z pliku oceny.txt.
+[2026-01-12 17:13:24] Nieudana próba logowania dla loginu: 0
+[2026-01-12 17:13:31] Uczen Eliot Alderson został poprawnie zalogowany do systemu.
+[2026-01-12 17:13:32] Uczen Eliot Alderson poprawnie wylogował się z systemu.
+[2026-01-12 17:13:35] Program dziennik elektroniczny został zamknięty przez użytkownika.
+[2026-01-12 17:13:35] Program dziennik elektroniczny został poprawnie zamknięty.
+[2026-01-12 17:13:39] Program dziennik elektroniczny został uruchomiony.
+[2026-01-12 17:13:39] Dane zostały poprawnie wczytane!
+[2026-01-12 17:13:39] Oceny zostały poprawnie wczytane z pliku oceny.txt.
+[2026-01-12 17:16:07] Uczen Eliot Alderson został poprawnie zalogowany do systemu.
+[2026-01-12 17:16:08] Uczen Eliot Alderson poprawnie wylogował się z systemu.
+[2026-01-12 17:16:27] Nieudana próba logowania dla loginu: bledny_login
+[2026-01-12 17:16:59] Program dziennik elektroniczny został zamknięty przez użytkownika.
+[2026-01-12 17:16:59] Program dziennik elektroniczny został poprawnie zamknięty.
+[2026-01-12 17:21:55] Program dziennik elektroniczny został uruchomiony.
+[2026-01-12 17:21:55] Dane zostały poprawnie wczytane!
+[2026-01-12 17:21:55] Oceny zostały poprawnie wczytane z pliku oceny.txt.
+[2026-01-12 17:22:06] Uczen Eliot Alderson został poprawnie zalogowany do systemu.
+[2026-01-12 17:22:11] Uczen Eliot Alderson wyświetlił swoje oceny.
+[2026-01-12 17:22:11] Wyświetlono ocenę: Cpp 3- dla ucznia.
+[2026-01-12 17:22:16] Uczen Eliot Alderson został poprawnie zalogowany do systemu.
+[2026-01-12 17:22:57] Uczen Eliot Alderson poprawnie wylogował się z systemu.
+[2026-01-12 17:23:00] Administrator admin admin został poprawnie zalogowany do systemu.
+[2026-01-12 17:25:25] Użytkownik: Igrek Iksiński został poprawnie dodany przez administratora admin admin.
+[2026-01-12 17:28:48] Administrator admin admin został poprawnie zalogowany do systemu.
+[2026-01-12 17:28:57] Administrator admin admin wyświetlił listę użytkowników.
+[2026-01-12 17:31:54] Użytkownik: imie nazwisko został usunięty przez administratora admin admin.
+[2026-01-12 17:32:19] Administrator admin admin został poprawnie zalogowany do systemu.
+[2026-01-12 17:33:30] Nauczyciel Igrek Iksiński został poprawnie zalogowany do systemu.
+[2026-01-12 17:36:39] Nauczyciel Igrek Iksiński wystawil ocene 3- uczniowi uczen z przedmiotu Fizyka.
+[2026-01-12 17:37:28] Zapisano wszystkie oceny do pliku oceny.txt przez nauczyciela Igrek Iksiński
+[2026-01-12 17:37:28] Nauczyciel Igrek Iksiński został poprawnie zalogowany do systemu.
+[2026-01-12 17:37:36] Zapisano wszystkie oceny do pliku oceny.txt przez nauczyciela Igrek Iksiński
+[2026-01-12 17:37:36] Nauczyciel Igrek Iksiński został poprawnie zalogowany do systemu.
+[2026-01-12 17:40:27] Zapisano wszystkie oceny do pliku oceny.txt przez nauczyciela Igrek Iksiński
+[2026-01-12 17:40:27] Nauczyciel Igrek Iksiński został poprawnie zalogowany do systemu.
+[2026-01-12 17:40:27] Nauczyciel Igrek Iksiński wypisal liste uczniow.
+[2026-01-12 17:41:10] Nauczyciel Igrek Iksiński został poprawnie zalogowany do systemu.
+[2026-01-12 17:41:12] Nauczyciel Igrek Iksiński wyświetlił listę uczniów.
+[2026-01-12 17:41:18] Wyświetlono ocenę: Cpp 3- dla ucznia.
+[2026-01-12 17:41:18] Wyświetlono ocenę: Fizyka 3- dla ucznia.
+[2026-01-12 17:41:49] Zaktualizowano ocene dla ucznia uczen przez nauczyciela Igrek Iksiński
+[2026-01-12 17:41:49] Zapisano wszystkie oceny do pliku oceny.txt przez nauczyciela Igrek Iksiński
+[2026-01-12 17:41:49] Nauczyciel Igrek Iksiński został poprawnie zalogowany do systemu.
+[2026-01-12 17:42:03] Nauczyciel Igrek Iksiński wyświetlił listę uczniów.
+[2026-01-12 17:42:09] Wyświetlono ocenę: Cpp 4+ dla ucznia.
+[2026-01-12 17:42:09] Wyświetlono ocenę: Fizyka 3- dla ucznia.
+[2026-01-12 17:46:03] Zaktualizowano ocene dla ucznia uczen przez nauczyciela Igrek Iksiński
+[2026-01-12 17:46:03] Zapisano wszystkie oceny do pliku oceny.txt przez nauczyciela Igrek Iksiński
+[2026-01-12 17:46:03] Nauczyciel Igrek Iksiński został poprawnie zalogowany do systemu.
+[2026-01-12 17:46:08] Nauczyciel Igrek Iksiński wyświetlił listę uczniów.
+[2026-01-12 17:46:11] Wyświetlono ocenę: WF 6 dla ucznia.
+[2026-01-12 17:46:11] Wyświetlono ocenę: przedmiot 3- dla ucznia.
+[2026-01-12 17:46:28] Usunieto ocene dla ucznia login przez nauczyciela Igrek Iksiński
+[2026-01-12 17:46:28] Zapisano wszystkie oceny do pliku oceny.txt przez nauczyciela Igrek Iksiński
+[2026-01-12 17:46:28] Nauczyciel Igrek Iksiński został poprawnie zalogowany do systemu.
+[2026-01-12 17:49:15] Uczen Eliot Alderson został poprawnie zalogowany do systemu.
+[2026-01-12 17:49:57] Uczen Eliot Alderson wyświetlił swoje oceny.
+[2026-01-12 17:49:57] Wyświetlono ocenę: Cpp 5 dla ucznia.
+[2026-01-12 17:49:57] Wyświetlono ocenę: Fizyka 3- dla ucznia.
+[2026-01-12 18:14:53] Uczen Eliot Alderson został poprawnie zalogowany do systemu.
+[2026-01-12 18:14:54] Uczen Eliot Alderson poprawnie wylogował się z systemu.
+[2026-01-12 18:14:57] Administrator admin admin został poprawnie zalogowany do systemu.

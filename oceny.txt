@@ -1,2 +1,3 @@
 login;WF;6;Beep-test;03.12.2025;1
-login;przedmiot;3-;Test ze spacja;16.12.2025;3
+uczen;Cpp;5;Zadanie;23.12.2025;3
+uczen;Fizyka;3-;Sprawozdanie;12.01.2026;4

@@ -1,6 +1,6 @@
 A;admin;*+9>>;admin;admin
 N;kot;F&1$;kot;pies
 N;nauczyciel;%.!4*+"%&);Adam;Kowalski
-U;login;#.'F?;imie;nazwisko
 N;login1;#.'F?c;nauczyciel;nauczycielski
 U;uczen;>,.2>;Eliot;Alderson
+N;nowy_nauczyciel;% #2: ?/*;Igrek;Iksiński

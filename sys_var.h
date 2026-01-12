@@ -1,6 +1,5 @@
 /* Plik sprawdzający używany system operacyjny, niektóre polecenia różnią się w systemach
 np. Windows - system("cls"); Linux - system("clear");
-//Uwaga: Wszystkie strumienie z przestrzeni std należy dodawać tutaj ręcznie (nie dodawałem w nagłówkach namespace std)
 
 Do prawidłowego działania na linuxie Trzeba włączyć emulację w CLionie: Run -> Edit Configurations... -> Emulate Terminal, wtedy wszystko ładnie czyści
 */
@@ -58,11 +57,6 @@ namespace Sys {
         }
         return tekst;
     }
-
-
-
-    //Walidacja podawanych zmiennych jako oceny: nazwy ucznia, nazwy przedmiotu, wartości oceny, opisu, daty, wagi
-    //Walidacja dodawanych użytkowników przez Administratora
 }
 
 #endif
