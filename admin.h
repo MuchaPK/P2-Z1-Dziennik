@@ -23,8 +23,8 @@ public:
             cout << "\n========================================\n";
             cout << "   PANEL ADMINISTRATORA: " << imie << " " << nazwisko << "\n";
             cout << "========================================\n";
-            cout << "1. Stwórz użytkownika\n";
-            cout << "2. Usuń Użytkownika\n";
+            cout << "1. Stworz uzytkownika\n";
+            cout << "2. Usun Uzytkownika\n";
             cout << "3. Wyloguj\n";
             cout << "wybor > ";
             wybor = Sys::pobierzInt();
@@ -43,19 +43,34 @@ public:
         ofstream uzytkownicy("uzytkownicy.txt", ios::app | ios::out);
         string typ_uzytkownika, login, haslo, imie, nazwisko;
 
-        cout << "Typ użytkownika: (U, N, A): "; cin >> typ_uzytkownika;
+        cout << "Typ uzytkownika: (U, N, A): "; cin >> typ_uzytkownika;
         cout << "Login: "; cin >> login;
         cout << "Haslo: "; cin >> haslo; haslo = Sys::szyfrowanie(haslo,totalnieUkrytyKluczDostepu);
         cout << "Imie: "; cin >> imie;
         cout << "Nazwisko: "; cin >> nazwisko;
 
         if (uzytkownicy.is_open()) {
-            uzytkownicy << "\n" << typ_uzytkownika << ";" << login << ";" << haslo << ";" <<  imie << ";" << nazwisko;
-            if (typ_uzytkownika == "U") baza.push_back(new Uczen(login, haslo, imie, nazwisko));
-            else if (typ_uzytkownika == "N") baza.push_back(new Nauczyciel(login, haslo, imie, nazwisko));
-            else if (typ_uzytkownika == "A") baza.push_back(new Admin(login, haslo, imie, nazwisko));
-            cout << "Dodano użytkownika: " << imie << " " << nazwisko << "!\n";
-            zrobRaport("Użytkownik: " + imie + " " + nazwisko + " został poprawnie dodany przez administratora " + this->imie + " " + this->nazwisko + ".");
+            if (typ_uzytkownika == "U") {
+                baza.push_back(new Uczen(login, haslo, imie, nazwisko));
+                uzytkownicy << "\n" << typ_uzytkownika << ";" << login << ";" << haslo << ";" <<  imie << ";" << nazwisko;
+                cout << "Dodano ucznia: " << imie << " " << nazwisko << "!\n";
+                zrobRaport("Użytkownik: " + imie + " " + nazwisko + " został poprawnie dodany przez administratora " + this->imie + " " + this->nazwisko + ".");
+            }
+            else if (typ_uzytkownika == "N"){
+                baza.push_back(new Nauczyciel(login, haslo, imie, nazwisko));
+                uzytkownicy << "\n" << typ_uzytkownika << ";" << login << ";" << haslo << ";" <<  imie << ";" << nazwisko;
+                cout << "Dodano nauczyciela: " << imie << " " << nazwisko << "!\n";
+                zrobRaport("Użytkownik: " + imie + " " + nazwisko + " został poprawnie dodany przez administratora " + this->imie + " " + this->nazwisko + ".");
+            }
+            else if (typ_uzytkownika == "A") {
+                baza.push_back(new Admin(login, haslo, imie, nazwisko));
+                uzytkownicy << "\n" << typ_uzytkownika << ";" << login << ";" << haslo << ";" <<  imie << ";" << nazwisko;
+                cout << "Dodano administratora: " << imie << " " << nazwisko << "!\n";
+                zrobRaport("Użytkownik: " + imie + " " + nazwisko + " został poprawnie dodany przez administratora " + this->imie + " " + this->nazwisko + ".");
+            }
+            else{
+                cout<<"Nie ma takiego typu uzytkownika"<<endl;
+            }
             Sys::pauza();
         }
         else {
