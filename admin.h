@@ -16,10 +16,10 @@ public:
 
     void pokazMenu(vector<Uzytkownik*>& baza) override {
         int wybor = 0;
-
+        zrobRaport("Administrator " + imie + " " + nazwisko + " został poprawnie zalogowany do systemu.");
         while (wybor != 3) {
             Sys::wyczysc();
-            zrobRaport("Administrator " + imie + " " + nazwisko + " został poprawnie zalogowany do systemu.");
+
             cout << "\n========================================\n";
             cout << "   PANEL ADMINISTRATORA: " << imie << " " << nazwisko << "\n";
             cout << "========================================\n";

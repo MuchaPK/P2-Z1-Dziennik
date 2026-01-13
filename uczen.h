@@ -107,10 +107,9 @@ class Uczen: public Uzytkownik{
 
     void pokazMenu(vector<Uzytkownik*>& baza) override {
             int wybor = 0;
-
+            zrobRaport("Uczen " + imie + " " + nazwisko + " został poprawnie zalogowany do systemu.");
             while (true) {
                 Sys::wyczysc();
-                zrobRaport("Uczen " + imie + " " + nazwisko + " został poprawnie zalogowany do systemu.");
                 cout << "\n========================================\n";
                 cout << "   PANEL UCZNIA: " << imie << " " << nazwisko << "\n";
                 cout << "========================================\n";

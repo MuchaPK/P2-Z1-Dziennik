@@ -13,6 +13,7 @@
 using namespace std;
 
 int main() {
+    utworzNowyPlikRaportu();
     zrobRaport("Program dziennik elektroniczny został uruchomiony.");
     vector<Uzytkownik*> baza;
 

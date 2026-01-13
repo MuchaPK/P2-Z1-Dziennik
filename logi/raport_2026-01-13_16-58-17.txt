@@ -1,0 +1,3 @@
+[2026-01-13 16:58:17] Program dziennik elektroniczny został uruchomiony.
+[2026-01-13 16:58:17] Dane zostały poprawnie wczytane!
+[2026-01-13 16:58:17] Oceny zostały poprawnie wczytane z pliku oceny.txt.

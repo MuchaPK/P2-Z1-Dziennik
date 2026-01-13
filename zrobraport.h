@@ -10,6 +10,21 @@
 
 using namespace std;
 
+
+string g_nazwaPliku; 
+
+void utworzNowyPlikRaportu() {
+    auto teraz = chrono::system_clock::now();
+    time_t czas_t = chrono::system_clock::to_time_t(teraz);
+
+    std::stringstream ss;
+    // Formatujemy datę do nazwy pliku. 
+    // UWAGA: Używamy myślników "-" zamiast dwukropków ":", bo Windows nie pozwala na ":" w nazwie pliku.
+    ss << "raport_" << std::put_time(std::localtime(&czas_t), "%Y-%m-%d_%H-%M-%S") << ".txt";
+    
+    g_nazwaPliku = ss.str(); // Przypisujemy wygenerowaną nazwę do zmiennej globalnej
+}
+
 void zrobRaport(string tekst) {
     // 1. Pobranie aktualnego czasu
     auto teraz = chrono::system_clock::now();
@@ -17,7 +32,7 @@ void zrobRaport(string tekst) {
 
     // 2. Otwarcie pliku w trybie dopisywania (ios::app)
     // Jeśli plik nie istnieje, ofstream automatycznie go stworzy.
-    ofstream plik("raport.txt", ios::app);
+    ofstream plik("./logi/" + g_nazwaPliku, ios::app);
 
     if (plik.is_open()) {
         // 3. Zapisanie sformatowanego czasu i tekstu

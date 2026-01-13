@@ -1,0 +1,4 @@
+[2026-01-13 16:59:24] Program dziennik elektroniczny został uruchomiony.
+[2026-01-13 16:59:24] Dane zostały poprawnie wczytane!
+[2026-01-13 16:59:24] Oceny zostały poprawnie wczytane z pliku oceny.txt.
+[2026-01-13 16:59:37] Nauczyciel nauczyciel nauczycielski został poprawnie zalogowany do systemu.

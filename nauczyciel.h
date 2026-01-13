@@ -137,7 +137,11 @@ public:
 
             else if (wybor == 3) edytujOcene(baza);
             else if (wybor == 4) usunOcene(baza);
-            else if (wybor == 5) break;
+            else if (wybor == 5) {
+                zrobRaport("Nauczyciel " + imie + " " + nazwisko + " został poprawnie wylogowany z systemu.");
+                break;
+
+            }
             else {
                 cout << "Nie ma takiej opcji!\n";
                 zrobRaport("Nauczyciel " + imie + " " + nazwisko + " wybral nieprawidlowa opcje w menu.");
